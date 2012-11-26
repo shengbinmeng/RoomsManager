@@ -1,0 +1,345 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\RoomsManager.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\RoomsManager.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 客房管理"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "客房管理 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2012  孟胜彬",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,176,8,50,14,WS_GROUP
+END
+
+IDD_ROOMSMANAGER_DIALOG DIALOGEX 0, 0, 561, 319
+STYLE DS_3DLOOK | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_VSCROLL | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "客房管理"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,105,26,50,14
+    PUSHBUTTON      "帮助",ID_HELP,26,26,50,14
+    CTEXT           "房间一览表",IDC_STATIC_TITLE,200,20,161,29,
+                    SS_CENTERIMAGE | SS_SUNKEN
+    PUSHBUTTON      "房间管理",IDC_BUTTON_MANAGE_ROOMS,400,26,50,14
+    PUSHBUTTON      "房类管理",IDC_BUTTON_MANAGE_TYPES,473,26,50,14
+END
+
+IDD_ROOMSEDIT_DIALOG DIALOG DISCARDABLE  0, 0, 230, 189
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "房间管理"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "完成",IDOK,88,157,68,14
+    PUSHBUTTON      "添加",IDC_BUTTON_ADD,151,62,50,14
+    PUSHBUTTON      "查看或修改",IDC_BUTTON_EDIT,151,31,50,14
+    LISTBOX         IDC_LIST_ROOMS,26,25,98,117,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "房间列表：",IDC_STATIC,27,14,41,8,NOT WS_GROUP
+    PUSHBUTTON      "删除",IDC_BUTTON_DELETE,151,93,50,14
+END
+
+IDD_TYPESEDIT_DIALOG DIALOG DISCARDABLE  0, 0, 230, 189
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "房间类型"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "完成",IDOK,88,157,68,14
+    PUSHBUTTON      "查看或修改",IDC_BUTTON_EDIT,151,31,50,14
+    PUSHBUTTON      "添加",IDC_BUTTON_ADD,151,62,50,14
+    LISTBOX         IDC_LIST_TYPES,26,25,98,117,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "删除",IDC_BUTTON_DELETE,151,93,50,14
+    LTEXT           "类型列表：",IDC_STATIC,27,14,41,8
+END
+
+IDD_ADDTYPE_DIALOG DIALOG DISCARDABLE  0, 0, 190, 208
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入信息"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,33,174,50,14
+    PUSHBUTTON      "取消",IDCANCEL,113,174,50,14
+    RTEXT           "类型名称：",IDC_STATIC,34,23,41,8
+    EDITTEXT        IDC_EDIT_NAME,81,20,69,14,ES_AUTOHSCROLL
+    RTEXT           "默认房费：",IDC_STATIC,34,43,41,8
+    RTEXT           "房类描述：",IDC_STATIC,34,83,41,8
+    EDITTEXT        IDC_EDIT_CHARGE,81,41,69,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_DISCRIBR,34,100,130,63,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | WS_VSCROLL
+    RTEXT           "显示颜色：",IDC_STATIC,34,63,41,8
+    CTEXT           "点击更改",IDC_STATIC_COLOR,88,61,53,13,SS_NOTIFY | 
+                    SS_CENTERIMAGE | WS_BORDER
+END
+
+IDD_ADDROOM_DIALOG DIALOG DISCARDABLE  0, 0, 200, 195
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入信息"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,33,164,50,14
+    PUSHBUTTON      "取消",IDCANCEL,113,164,50,14
+    RTEXT           "房间号：",IDC_STATIC,34,23,41,8
+    EDITTEXT        IDC_EDIT_NAME,81,20,69,14,ES_AUTOHSCROLL
+    RTEXT           "房间类型：",IDC_STATIC,34,43,41,8
+    RTEXT           "房费：",IDC_STATIC,34,63,41,8
+    RTEXT           "房间描述：",IDC_STATIC,34,82,41,8
+    EDITTEXT        IDC_EDIT_CHARGE,81,61,69,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_DISCRIBE,34,99,130,53,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | WS_VSCROLL
+    COMBOBOX        IDC_COMBO_TYPE,81,41,69,60,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_USEROOM_DIALOG DIALOG DISCARDABLE  0, 0, 216, 246
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "房间入住"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,43,189,50,14
+    PUSHBUTTON      "取消",IDCANCEL,130,189,50,14
+    RTEXT           "姓名：",IDC_STATIC,43,30,25,8
+    EDITTEXT        IDC_EDIT_USER_NAME,74,27,48,14,ES_AUTOHSCROLL
+    RTEXT           "身份证号：",IDC_STATIC,27,51,41,8
+    EDITTEXT        IDC_EDIT_USER_ID,74,47,105,13,ES_AUTOHSCROLL
+    RTEXT           "房费：",IDC_STATIC,43,70,25,8
+    EDITTEXT        IDC_EDIT_CHARGE,74,66,48,14,ES_AUTOHSCROLL
+    LTEXT           "元",IDC_STATIC,128,69,9,8
+    RTEXT           "押金：",IDC_STATIC,43,90,25,8
+    EDITTEXT        IDC_EDIT_PREPAY,74,86,48,14,ES_AUTOHSCROLL
+    LTEXT           "元",IDC_STATIC,128,89,9,8
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_IN_TIME,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | 
+                    WS_TABSTOP,74,106,105,13
+    LTEXT           "入住时间：",IDC_STATIC,27,110,41,8
+    EDITTEXT        IDC_EDIT_NOTE,74,125,106,51,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | WS_VSCROLL
+    LTEXT           "备注：",IDC_STATIC,43,127,25,8
+    PUSHBUTTON      "清除",IDC_BUTTON_CLEAR,43,215,50,14
+    PUSHBUTTON      "打印收条",IDC_BUTTON_PRINT,130,216,50,14
+    CTEXT           "房间",IDC_STATIC_TITLE,69,4,67,15
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "RoomsManager Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "RoomsManager\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2012\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "RoomsManager.EXE\0"
+            VALUE "ProductName", "RoomsManager 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_ROOMSMANAGER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 545
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 312
+    END
+
+    IDD_ROOMSEDIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_TYPESEDIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_ADDTYPE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 201
+    END
+
+    IDD_ADDROOM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_USEROOM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        BOTTOMMARGIN, 239
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 RoomsManager(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\RoomsManager.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
